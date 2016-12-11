@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 from setuptools import setup
 
 install_requires = (
@@ -7,10 +5,12 @@ install_requires = (
 )
 
 tests_require = (
-    'nose',
+    'pytest',
+    'mock',
 )
 
 setup_requires = (
+    'pytest-runner',
     'flake8',
 )
 
@@ -23,7 +23,6 @@ setup(
                  'into HTML files.'),
     license='Apache 2.0',
     packages=['tridinjector'],
-    test_suite='nose.collector',
     install_requires=install_requires,
     tests_require=tests_require,
     setup_requires=setup_requires,

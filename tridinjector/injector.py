@@ -31,8 +31,7 @@ def _write_output(soup, output_filename):
 
 def main():
     if len(sys.argv) < 4:
-        print('usage: tracking-id-injector \
-            tracking_id input_filename output_filename')
+        print('usage: tracking-id-injector tracking_id input_filename output_filename')
         exit(1)
 
     soup = _parse_input(sys.argv[2])
