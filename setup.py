@@ -16,7 +16,7 @@ setup_requires = (
 
 setup(
     name='tracking-id-injector',
-    version='0.1.0',
+    version='1.0.0',
     url='https://github.com/msufa/tracking-id-injector',
     author='Maciek Sufa',
     description=('Console script for injecting Google Analytics tracking IDs '
