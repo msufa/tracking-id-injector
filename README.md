@@ -1,2 +1,39 @@
 # tracking-id-injector
-Inject tracking IDs into HTML
+[![Build Status](https://travis-ci.org/msufa/tracking-id-injector.svg?branch=master)](https://travis-ci.org/msufa/tracking-id-injector)
+
+A simple script for ingesting Google Analytics tracking tags into HTML documents.
+
+The main purpose for this script is to use it in CI for static WWW pages to ingest tracking code for Google Analytics.
+
+## Installation
+Optionally you might want to set up `virtualenv` before installing the script:
+
+```
+$ virtualenv env
+$ . ./env/bin/activate
+```
+
+Next:
+
+```
+$ git clone git@github.com:msufa/tracking-id-injector.git
+$ cd tracking-id-injector
+$ python setup.py install
+$ tracking-id-injector
+usage: tracking-id-injector tracking_id input_filename output_filename
+```
+
+`tracking_id` should be set to the `UA...` Tracking ID from the Google Analytics Tracking Info page.
+
+## Testing
+```
+$ python setup.py flake8
+$ python setup.py test
+```
+
+## Caveats
+This script injects a Google tracking JavaScript tag between `head` tags in a HTML document.
+If there are `meta` tags that are not properly closed inside of `head`, the tracking script might be injected
+under the last open `meta` tag and an additional closing `meta` tag might be added.
+This is caused by intricacies of [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) which is used to
+parse and manipulate HTML.
