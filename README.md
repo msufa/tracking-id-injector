@@ -25,6 +25,16 @@ usage: tracking-id-injector tracking_id input_filename output_filename
 
 `tracking_id` should be set to the `UA...` Tracking ID from the Google Analytics Tracking Info page.
 
+## Usage
+To inject tracking tags into every HTML file in `./www` directory:
+
+```
+find ./www -maxdepth 1 -name "*.html" | xargs -n 1 -I {} tracking-id-injector $GOOGLE_TRACKING_ID {} {}
+```
+
+You might consider storing the value of your Tracking ID under `GOOGLE_TRACKING_ID`
+in the environment variables of e.g. you CI pipeline.
+
 ## Testing
 ```
 $ python setup.py flake8
