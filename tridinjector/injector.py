@@ -26,7 +26,7 @@ def _inject_tracking_id(tracking_id, soup):
 
 def _write_output(soup, output_filename):
     with open(output_filename, 'w') as outfile:
-        outfile.write(soup.prettify())
+        outfile.write(soup.prettify().encode('utf-8'))
 
 
 def main():
