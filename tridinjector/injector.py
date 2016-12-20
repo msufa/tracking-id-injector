@@ -26,7 +26,16 @@ def _inject_tracking_id(tracking_id, soup):
 
 def _write_output(soup, output_filename):
     with open(output_filename, 'w') as outfile:
-        outfile.write(soup.prettify().encode('utf-8'))
+        outfile.write(_remove_stray_tags(soup.prettify()).encode('utf-8'))
+
+
+def _remove_stray_tags(output):
+    """
+    BeautifulSoup's parser is sometimes to eager to close tags, which produces output like
+    <embed></embed>, which some HTML validators fail to accept. This function removes
+    the stray tags if found.
+    """
+    return output.replace("</embed>", "")
 
 
 def main():
