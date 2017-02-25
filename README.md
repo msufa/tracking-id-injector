@@ -1,5 +1,5 @@
 # tracking-id-injector
-[![Build Status](https://travis-ci.org/msufa/tracking-id-injector.svg?branch=master)](https://travis-ci.org/msufa/tracking-id-injector)
+[![Build Status](https://travis-ci.org/msufa/tracking-id-injector.svg?branch=master)](https://travis-ci.org/msufa/tracking-id-injector) [![codecov](https://codecov.io/gh/msufa/tracking-id-injector/branch/master/graph/badge.svg)](https://codecov.io/gh/msufa/tracking-id-injector)
 
 A simple script for ingesting Google Analytics tracking tags into HTML documents.
 
