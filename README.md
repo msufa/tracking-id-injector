@@ -5,7 +5,7 @@
 
 A simple script for ingesting Google Analytics tracking tags into HTML documents.
 
-The main purpose for this script is to use it in CI for static WWW pages to ingest tracking code for Google Analytics.
+The main purpose of this script is to use it in CI for static WWW pages to ingest tracking code for Google Analytics.
 
 ## Installation
 Optionally you might want to set up `virtualenv` before installing the script:
