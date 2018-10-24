@@ -1,7 +1,7 @@
 from setuptools import setup
 
 install_requires = (
-    'beautifulsoup4==4.5.1',
+    'beautifulsoup4==4.6.3',
 )
 
 tests_require = (
