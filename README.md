@@ -49,3 +49,5 @@ If there are `meta` tags that are not properly closed inside of `head`, the trac
 under the last open `meta` tag and an additional closing `meta` tag might be added.
 This is caused by intricacies of [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) which is used to
 parse and manipulate HTML.
+
+Dummy change to trigger CI
